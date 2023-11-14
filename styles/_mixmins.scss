@@ -1,0 +1,19 @@
+@mixin defaultFlexContainer {
+    max-width: 1120px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin animation ($animation, $duration, $method, $times){
+    animation: $animation $duration $method $times;
+}
+
+@mixin keyframes ($name){
+    @keyframes #{$name}{
+        @content;
+    }
+}
+
+
