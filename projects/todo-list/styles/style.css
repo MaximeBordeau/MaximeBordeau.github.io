@@ -1,0 +1,390 @@
+@font-face {
+  font-family: "recoletablack";
+  src: url("/fonts/recoleta-black-webfont.woff2") format("woff2"), url("/fonts/recoleta-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "recoletabold";
+  src: url("/fonts/recoleta-bold-webfont.woff2") format("woff2"), url("/fonts/recoleta-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "recoletalight";
+  src: url("/fonts/recoleta-light-webfont.woff2") format("woff2"), url("/fonts/recoleta-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "recoletamedium";
+  src: url("/fonts/recoleta-medium-webfont.woff2") format("woff2"), url("/fonts/recoleta-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "recoletaregular";
+  src: url("/fonts/recoleta-regular-webfont.woff2") format("woff2"), url("/fonts/recoleta-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "recoletasemibold";
+  src: url("/fonts/recoleta-semibold-webfont.woff2") format("woff2"), url("/fonts/recoleta-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "recoletathin";
+  src: url("/fonts/recoleta-thin-webfont.woff2") format("woff2"), url("/fonts/recoleta-thin-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #fdfdfd;
+  color: #242422;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Lato", "sans serif";
+}
+
+#titre {
+  width: 100%;
+}
+#titre .container-titre {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+#titre .container-titre h1 {
+  font-size: clamp(4.5rem, 2.9286rem + 7.8571vw, 10rem);
+  color: #5F5FE3;
+  letter-spacing: -6px;
+  font-family: "recoletabold", sans-serif;
+  height: 80%;
+  width: 100%;
+}
+#titre .container-titre h1::after {
+  content: "";
+  background-color: #EE6669;
+  height: 3px;
+  border-radius: 24px;
+  display: block;
+  width: 26rem;
+  animation: ligne-titre 1s ease-out forwards;
+  margin: auto;
+}
+@media (max-width: 500px) {
+  #titre .container-titre h1::after {
+    animation: ligne-titreMobile 1s ease-out forwards;
+  }
+}
+@keyframes ligne-titreMobile {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 16rem;
+  }
+}
+#titre span {
+  animation: couleur-titre 0.5s ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+#titre span::before {
+  content: "";
+  color: #EE6669;
+}
+@keyframes couleur-titre {
+  0% {
+    color: #5F5FE3;
+  }
+  100% {
+    color: #EE6669;
+  }
+}
+#titre h2 {
+  padding: 1rem;
+  font-size: clamp(2rem, 1.7143rem + 1.4286vw, 3rem);
+  height: 20%;
+  width: 100%;
+  text-align: center;
+  font-weight: 300;
+  opacity: 0;
+  color: #EE6669;
+  -webkit-animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: 2.5s;
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-100%);
+    opacity: 0;
+    color: #EE6669;
+  }
+  15% {
+    opacity: 0;
+    color: #EE6669;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    color: #EE6669;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+    color: #242422;
+  }
+}
+#titre strong {
+  position: absolute;
+  margin-left: 16px;
+  animation: bounce-in-fwd 1s ease-in-out forwards;
+  animation-delay: 2s;
+  opacity: 0;
+}
+@keyframes bounce-in-fwd {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: scale(0.84);
+    transform: scale(0.84);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  89% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  95% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+
+#todolist {
+  height: fit-content;
+  width: 100%;
+}
+#todolist .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4rem;
+  height: 100%;
+  width: 100%;
+  gap: 3rem;
+}
+#todolist .container form {
+  width: 90%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 6px;
+  max-width: 600px;
+}
+#todolist .container form #input {
+  border: none;
+  height: 50px;
+  width: 100%;
+  background-color: white;
+  font-size: 1rem;
+  text-align: center;
+  color: #242422;
+  border-radius: 6px;
+}
+#todolist .container form #input::placeholder {
+  color: #242422;
+}
+#todolist .container form #input:focus {
+  outline-color: #5F5FE3;
+  outline-width: 0.1px;
+}
+#todolist .container form .todos-container {
+  background-color: white;
+  width: 100%;
+}
+#todolist .container form .todos-container .task {
+  height: 50px;
+  width: 100%;
+  border-top: 1px solid #E7E6ED;
+  cursor: pointer;
+  color: #242422;
+  transition: color 1s;
+  transition-delay: 0.5s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#todolist .container form .todos-container .task .check-div {
+  width: 20%;
+  height: 100%;
+  position: relative;
+}
+#todolist .container form .todos-container .task .check-div .check {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: #EE6669 2px solid;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  transition: all 0.5s;
+}
+#todolist .container form .todos-container .task .check-div .check::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -50%);
+  margin-left: 2rem;
+  content: "";
+  width: 0px;
+  height: 2px;
+  border-radius: 4px;
+  background-color: #EE6669;
+  transition: all 0.5s;
+  transition-delay: 0.5s;
+  opacity: 80%;
+}
+#todolist .container form .todos-container .task .check-div .completed {
+  border: #5F5FE3 2px solid;
+  background-color: #5F5FE3;
+  transition: all 0.5s;
+}
+#todolist .container form .todos-container .task .check-div .completed::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -50%);
+  margin-left: 2rem;
+  content: "";
+  width: 2000%;
+  height: 1.5px;
+  border-radius: 4px;
+  background-color: #5F5FE3;
+  transition: all 0.5s ease-in-out;
+  transition-delay: 0.25s;
+  opacity: 80%;
+}
+@media (min-width: 1300px) {
+  #todolist .container form .todos-container .task .check-div .completed::after {
+    width: 3500%;
+  }
+}
+#todolist .container form .todos-container .task .txt-div {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-left: 16px;
+}
+#todolist .container form .todos-container .completed {
+  color: rgba(95, 95, 227, 0.6352941176);
+  transition: color 1s;
+}
+#todolist .container #instructions {
+  width: 100%;
+  text-align: center;
+  color: #242422;
+  align-items: center;
+  transition: all 0.2s;
+  position: fixed;
+  margin-top: 8rem;
+  transition: all 0.2s;
+}
+#todolist .container .invisible {
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+#quote-generator {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+#quote-generator .box {
+  height: 200px;
+  width: 70%;
+  max-width: 1120px;
+  background-color: #242422;
+  border-radius: 12px;
+  color: #fdfdfd;
+}
+
+footer {
+  background-color: #EE6669;
+  height: 100%;
+  min-height: 600px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=style.css.map */
