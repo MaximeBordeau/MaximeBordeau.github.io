@@ -1,4 +1,46 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "recoletablack";
+  src: url("/fonts/recoleta-black-webfont.woff2") format("woff2"), url("/fonts/recoleta-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "recoletabold";
+  src: url("/fonts/recoleta-bold-webfont.woff2") format("woff2"), url("/fonts/recoleta-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "recoletalight";
+  src: url("/fonts/recoleta-light-webfont.woff2") format("woff2"), url("/fonts/recoleta-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "recoletamedium";
+  src: url("/fonts/recoleta-medium-webfont.woff2") format("woff2"), url("/fonts/recoleta-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "recoletaregular";
+  src: url("/fonts/recoleta-regular-webfont.woff2") format("woff2"), url("/fonts/recoleta-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "recoletasemibold";
+  src: url("/fonts/recoleta-semibold-webfont.woff2") format("woff2"), url("/fonts/recoleta-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "recoletathin";
+  src: url("/fonts/recoleta-thin-webfont.woff2") format("woff2"), url("/fonts/recoleta-thin-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 *,
 ::before,
 ::after {
@@ -23,15 +65,12 @@ body {
 }
 
 .wrapper {
-  background: linear-gradient(185deg, rgb(0, 31, 154) 0%, rgb(1, 32, 157) 6.25%, rgb(3, 36, 164) 12.5%, rgb(8, 42, 176) 18.75%, rgb(15, 51, 191) 25%, rgb(26, 62, 207) 31.25%, rgb(47, 81, 217) 37.5%, rgb(85, 111, 212) 43.75%, rgb(121, 139, 210) 50%, rgb(155, 166, 212) 56.25%, rgb(183, 190, 217) 62.5%, rgb(207, 210, 224) 68.75%, rgb(225, 227, 233) 75%, rgb(239, 239, 241) 81.25%, rgb(248, 248, 248) 87.5%, rgb(253, 253, 253) 93.75%, rgb(255, 255, 255) 100%);
-  position: relative;
+  background: linear-gradient(190deg, rgb(0, 31, 154) 0%, rgb(1, 32, 157) 6.25%, rgb(3, 36, 164) 12.5%, rgb(8, 42, 176) 18.75%, rgb(15, 51, 191) 25%, rgb(26, 62, 207) 31.25%, rgb(47, 81, 217) 37.5%, rgb(85, 111, 212) 43.75%, rgb(121, 139, 210) 50%, rgb(155, 166, 212) 56.25%, rgb(183, 190, 217) 62.5%, rgb(207, 210, 224) 68.75%, rgb(225, 227, 233) 75%, rgb(239, 239, 241) 81.25%, rgb(248, 248, 248) 87.5%, rgb(253, 253, 253) 93.75%, rgb(255, 255, 255) 100%);
 }
 
 section {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
   padding: 2%;
 }
 
@@ -69,11 +108,6 @@ h4 {
   flex-direction: row;
   justify-content: flex-end;
 }
-@media screen and (max-width: 1300px) {
-  .section-accueil .navbar {
-    justify-content: flex-start;
-  }
-}
 .section-accueil .navbar .blocs-menu {
   display: flex;
   flex-direction: row;
@@ -82,69 +116,12 @@ h4 {
   width: 50%;
   height: 100%;
 }
-@media screen and (max-width: 1300px) {
-  .section-accueil .navbar .blocs-menu {
-    display: none;
-  }
-}
 .section-accueil .navbar .blocs-menu li,
 .section-accueil .navbar .blocs-menu a {
   list-style-type: none;
   text-decoration: none;
   color: white;
   opacity: 100%;
-}
-.section-accueil .navbar .bouton-menu {
-  width: 2.5rem;
-  height: 2rem;
-  margin-left: 5%;
-  position: relative;
-}
-@media screen and (min-width: 1300px) {
-  .section-accueil .navbar .bouton-menu {
-    display: none;
-  }
-}
-.section-accueil .navbar .bouton-menu .bouton-conteneur {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  position: absolute;
-}
-.section-accueil .navbar .bouton-menu .bouton-conteneur .bouton-ligne {
-  width: 100%;
-  height: 3px;
-  border-radius: 1px;
-  background: #f1f1f1;
-  position: absolute;
-}
-.section-accueil .navbar .bouton-menu .bouton-conteneur #ligne1 {
-  top: 0%;
-  left: 0%;
-  z-index: 3;
-}
-.section-accueil .navbar .bouton-menu .bouton-conteneur #ligne2 {
-  top: 50%;
-  left: 0%;
-  z-index: 2;
-}
-.section-accueil .navbar .bouton-menu .bouton-conteneur #ligne3 {
-  top: 100%;
-  left: 0%;
-  z-index: 1;
-}
-.section-accueil .navbar .bouton-menu .active #ligne1 {
-  top: 50%;
-  transform: rotate(45deg);
-  transition: top 300ms ease, transform 300ms 300ms ease;
-}
-.section-accueil .navbar .bouton-menu .active #ligne2 {
-  background: transparent;
-}
-.section-accueil .navbar .bouton-menu .active #ligne3 {
-  top: 50%;
-  transform: rotate(-45deg);
-  transition: top 300ms ease, transform 300ms 300ms ease;
 }
 .section-accueil .navbar .bouton-invisible .bouton-menu {
   display: none;
@@ -177,6 +154,7 @@ h4 {
 }
 .section-accueil .hero .texte-animation strong {
   color: #AF5AF5;
+  color: #556fd4;
 }
 .section-accueil #scroll-animation {
   width: 100%;
@@ -208,7 +186,7 @@ h4 {
   width: 6px;
   height: 6px;
   margin-left: -3px;
-  background-color: #AF5AF5;
+  background-color: #556fd4;
   border-radius: 100%;
   -webkit-animation: sdb10 2s infinite;
   animation: sdb10 2s infinite;
@@ -283,7 +261,6 @@ h4 {
   color: white;
 }
 .section-competences .container-competences {
-  max-width: 1120px;
   width: 100%;
   height: fit-content;
   display: flex;
@@ -296,6 +273,7 @@ h4 {
   flex-direction: row;
   color: #1A1D22;
   flex-wrap: wrap;
+  width: 100%;
 }
 .section-competences .container-competences .panel-competences {
   min-width: 18rem;
@@ -342,7 +320,6 @@ h4 {
   margin: auto;
 }
 .section-portfolio .container-portfolio {
-  max-width: 1120px;
   width: 100%;
   height: fit-content;
   display: flex;
@@ -413,21 +390,23 @@ h4 {
 /* ---------- Section À propos ---------- */
 .section-apropos {
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   padding-bottom: 12rem;
   color: #1a1d22;
+  width: 100%;
 }
 .section-apropos .container-apropos {
-  max-width: 1120px;
   width: 100%;
   height: fit-content;
   display: flex;
   flex-direction: column;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
+  max-width: 1120px;
+  margin: auto;
   padding: 2rem;
   gap: 2rem;
   background: rgba(255, 255, 255, 0);
@@ -436,6 +415,7 @@ h4 {
   -webkit-backdrop-filter: blur(8.5px);
   border-radius: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  max-width: 1120px;
 }
 @media screen and (max-width: 500px) {
   .section-apropos .container-apropos {
@@ -469,16 +449,17 @@ h4 {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 20%;
+  height: 15%;
   background-color: #001F9A;
 }
 .section-contact .container-contact {
-  max-width: 1120px;
   width: 100%;
   height: fit-content;
   display: flex;
   flex-direction: column;
   color: white;
+  max-width: 1120px;
+  margin: auto;
 }
 .section-contact .container-contact .panel-contact {
   display: flex;
@@ -578,7 +559,6 @@ h4 {
   height: 30%;
 }
 .section-footer .container-footer {
-  max-width: 1120px;
   width: 100%;
   height: fit-content;
   display: flex;
@@ -589,33 +569,33 @@ h4 {
 }
 .section-footer .container-footer .slogan-footer {
   color: white;
-  font-size: 1.3rem;
   font-weight: 200;
   text-align: center;
   padding: 2%;
 }
 .section-footer .container-footer .slogan-footer h3 {
   font-weight: 200;
+  font-size: clamp(1.3rem, 1.1rem + 1vw, 2rem);
 }
 .section-footer .container-footer .links {
   color: #1A1D22;
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 5%;
+  padding: 1%;
 }
 .section-footer .container-footer .links a {
   text-decoration: none;
   color: white;
   width: 5%;
-  min-width: 2rem;
+  min-width: 3rem;
   max-width: 5rem;
 }
 .section-footer .container-footer .links a img {
   width: 100%;
-  min-width: 2rem;
+  min-width: 3rem;
   max-width: 5rem;
 }
 
