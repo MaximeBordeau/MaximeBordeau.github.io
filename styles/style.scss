@@ -25,30 +25,30 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.wrapper {
-  background: linear-gradient(
-    190deg,
-    rgb(0% 12.157% 60.392%) 0%,
-    rgb(0.297% 12.604% 61.437%) 6.25%,
-    rgb(1.25% 13.973% 64.455%) 12.5%,
-    rgb(3.04% 16.341% 69.116%) 18.75%,
-    rgb(5.919% 19.809% 74.918%) 25%,
-    rgb(10.157% 24.469% 81.258%) 31.25%,
-    rgb(18.379% 31.81% 85.105%) 37.5%,
-    rgb(33.365% 43.399% 83.213%) 43.75%,
-    rgb(47.647% 54.673% 82.549%) 50%,
-    rgb(60.601% 65.153% 83.213%) 56.25%,
-    rgb(71.804% 74.482% 85.105%) 62.5%,
-    rgb(81.042% 82.429% 87.935%) 68.75%,
-    rgb(88.28% 88.883% 91.275%) 75%,
-    rgb(93.622% 93.822% 94.614%) 81.25%,
-    rgb(97.242% 97.283% 97.444%) 87.5%,
-    rgb(99.323% 99.326% 99.336%) 93.75%,
-    rgb(100% 100% 100%) 100%
-  );
+// .wrapper {
+//   background: linear-gradient(
+//     190deg,
+//     rgb(0% 12.157% 60.392%) 0%,
+//     rgb(0.297% 12.604% 61.437%) 6.25%,
+//     rgb(1.25% 13.973% 64.455%) 12.5%,
+//     rgb(3.04% 16.341% 69.116%) 18.75%,
+//     rgb(5.919% 19.809% 74.918%) 25%,
+//     rgb(10.157% 24.469% 81.258%) 31.25%,
+//     rgb(18.379% 31.81% 85.105%) 37.5%,
+//     rgb(33.365% 43.399% 83.213%) 43.75%,
+//     rgb(47.647% 54.673% 82.549%) 50%,
+//     rgb(60.601% 65.153% 83.213%) 56.25%,
+//     rgb(71.804% 74.482% 85.105%) 62.5%,
+//     rgb(81.042% 82.429% 87.935%) 68.75%,
+//     rgb(88.28% 88.883% 91.275%) 75%,
+//     rgb(93.622% 93.822% 94.614%) 81.25%,
+//     rgb(97.242% 97.283% 97.444%) 87.5%,
+//     rgb(99.323% 99.326% 99.336%) 93.75%,
+//     rgb(100% 100% 100%) 100%
+//   );
 
-  // position: relative;
-}
+//   // position: relative;
+// }
 
 section {
   width: 100%;
@@ -104,8 +104,8 @@ h4 {
     // @media screen and (max-width: 1300px) {
     //   justify-content: flex-start;
     // }
-    
-    font-size: 1.1rem;
+
+    font-size: clamp(1.2rem, 1.1143rem + 0.4286vw, 1.5rem);
     font-weight: 200;
     width: 100%;
     height: 15%;
@@ -114,7 +114,7 @@ h4 {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    // align-items: center;
+    align-items: center;
 
     // text-align: center;
 
@@ -133,7 +133,7 @@ h4 {
       a {
         list-style-type: none;
         text-decoration: none;
-        color: white;
+        color: $couleurwhite;
         opacity: 100%;
       }
     }
@@ -213,7 +213,6 @@ h4 {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    
 
     h1 {
       width: 100%;
@@ -237,13 +236,11 @@ h4 {
       // }
 
       p {
-        color: white;
+        color: $couleurwhite;
       }
 
       strong {
-        color: $couleurSecondaire;
-        color: #556fd4;
-
+        color: $couleur2;
       }
     }
   }
@@ -298,7 +295,7 @@ h4 {
         width: 6px;
         height: 6px;
         margin-left: -3px;
-        background-color: #556fd4;
+        background-color: $couleur2;
         border-radius: 100%;
         -webkit-animation: sdb10 2s infinite;
         animation: sdb10 2s infinite;
@@ -365,6 +362,26 @@ h4 {
       }
     }
   }
+
+  .custom-shape-divider-bottom-1700648719 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .custom-shape-divider-bottom-1700648719 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 29px;
+  }
+
+  .custom-shape-divider-bottom-1700648719 .shape-fill {
+    fill: #ffffff;
+  }
 }
 
 /* ---------- Section Compétences ---------- */
@@ -377,9 +394,9 @@ h4 {
   //   width: 40rem;
   //   height: 40rem;
   //   border-radius: 50%;
-  //   border: 1px solid white;
-  //   background: $couleurSecondaire;
-  // background: radial-gradient(circle, $couleurSecondaire -30%, rgba(255,255,255,1) 100%);
+  //   border: 1px solid $couleurwhite;
+  //   background: $couleur2;
+  // background: radial-gradient(circle, $couleur2 -30%, rgba(255,255,255,1) 100%);
   // }
 
   .titre-competences {
@@ -387,7 +404,7 @@ h4 {
     justify-content: center;
     text-align: center;
     padding: 2rem;
-    color: white;
+    color: $couleur1;
   }
 
   .container-competences {
@@ -398,39 +415,55 @@ h4 {
 
     justify-content: center;
     align-items: center;
-    gap: 2rem;
     padding: 1rem;
     display: flex;
     flex-direction: row;
-    color: $couleurnoire;
+    color: $couleurblack;
     flex-wrap: wrap;
     width: 100%;
 
     .panel-competences {
       min-width: 18rem;
       width: 20rem;
-      height: 24rem;
+      height: 27rem;
       border-radius: 12px;
       padding: 2rem;
-      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
-        rgba(0, 0, 0, 0.23) 0px 6px 6px;
+      // box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      //   rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
-      background-color: white;
+      background-color: $couleurwhite;
       text-align: center;
 
       .flex-haut {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: flex-start;
 
         h3 {
-          color: $couleurPrimaire;
+          color: $couleur1;
           padding: 1rem;
         }
 
-        .svg-competences {
-          width: 3.5rem;
+        .container-svg {
+          border-radius: 50%;
+          width: 5rem;
+          height: 5rem;
+          background: rgb(22, 31, 140);
+          background: linear-gradient(
+            140deg,
+            rgba(22, 31, 140, 1) 30%,
+            rgba(159, 137, 245, 1) 100%
+          );
+          position: relative;
+
+          .svg-competences {
+            width: 2.5rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
         }
       }
 
@@ -451,12 +484,37 @@ h4 {
 
 .section-portfolio {
   // background-color: #001f9a;
-  // border: 1px solid white;
-  color: white;
+  // border: 1px solid $couleurwhite;
   flex-direction: column;
 
   justify-content: flex-start;
   align-items: center;
+
+  background-color: $couleurgrey;
+
+  position: relative;
+
+  .custom-shape-divider-top-1700650492 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    // height: 100%;
+
+    svg {
+      position: relative;
+      display: block;
+      width: calc(127% + 1.3px);
+      height: 64px;
+
+      .shape-fill {
+        fill: #ffffff;
+      }
+    }
+  }
 
   .titre-port {
     padding: 3rem;
@@ -465,6 +523,7 @@ h4 {
     // margin: 80px 0px 0 150px;
     text-align: center;
     margin: auto;
+    color: $couleur2;
   }
 
   .container-portfolio {
@@ -486,6 +545,13 @@ h4 {
 
       border-radius: 12px;
 
+      background-color: $couleurwhite;
+
+      display: flex;
+
+      flex-direction: column;
+      align-items: center;
+
       &:hover {
         transform: translateY(-5px);
       }
@@ -498,47 +564,97 @@ h4 {
         img {
           width: 100%;
           height: auto;
+          border-radius: 12px;
         }
       }
 
-      h3 {
+     
+
+      .cont-text{
+
+        text-align: center;
+
+         h3 {
         padding: 10px 10px 0;
       }
       p {
         padding: 10px 10px 0;
       }
+
+        
+      } 
+
+      .btn-projets {
+        margin-top: 1rem;
+        background: $couleur2;
+        border: 1px solid $couleur2;
+        border-radius: 6px;
+        box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+        box-sizing: border-box;
+        color: #ffffff;
+        cursor: pointer;
+        display: inline-block;
+        // font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+        font-size: 16px;
+        font-weight: 800;
+        line-height: 16px;
+        min-height: 40px;
+        outline: 0;
+        padding: 12px 14px;
+        text-align: center;
+        text-rendering: geometricprecision;
+        text-transform: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+        text-decoration-line: none;
+  
+        &:hover,
+        &:active {
+          background-color: initial;
+          background-position: 0 0;
+          color: $couleur2;
+        }
+  
+        &:active {
+          opacity: 0.5;
+        }
+      }
     }
 
-    .btn-projets {
-      display: block;
-      margin: 10px;
-      width: 180px;
-      height: 50px;
-      line-height: 50px;
-      text-align: center;
-      color: #333;
-      text-decoration: none;
-      border: 1px solid #333;
-      border-radius: 3px;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
+    
 
-      &::after {
-        content: "";
-        height: 240px;
-        width: 100px;
-        background: rgba(255, 255, 255, 0.4);
-        display: block;
-        position: absolute;
-        left: -150px;
-        top: -50px;
-        transform: rotate(-45deg);
-      }
-      &:hover::after {
-        transition: transform 0.3s 0.1s linear;
-        transform: translateX(400px);
-      }
+    .btn-projets {
+      // display: block;
+      // margin: 10px;
+      // width: 180px;
+      // height: 50px;
+      // line-height: 50px;
+      // text-align: center;
+      // color: #333;
+      // text-decoration: none;
+      // border: 1px solid #333;
+      // border-radius: 3px;
+      // cursor: pointer;
+      // position: relative;
+      // overflow: hidden;
+
+      // &::after {
+      //   content: "";
+      //   height: 240px;
+      //   width: 100px;
+      //   background: rgba(255, 255, 255, 0.4);
+      //   display: block;
+      //   position: absolute;
+      //   left: -150px;
+      //   top: -50px;
+      //   transform: rotate(-45deg);
+      // }
+      // &:hover::after {
+      //   transition: transform 0.3s 0.1s linear;
+      //   transform: translateX(400px);
+      // }
     }
   }
 }
@@ -552,10 +668,11 @@ h4 {
   align-items: center;
   padding-bottom: 12rem;
 
-  color: #1a1d22;
+  color: $couleurblack;
 
   width: 100%;
-  
+
+  background-color: $couleurwhite;
 
   .container-apropos {
     @include defaultFlexContainer;
@@ -582,7 +699,6 @@ h4 {
     border: 1px solid rgba(255, 255, 255, 0.18);
 
     max-width: 1120px;
-
 
     .flex-photo {
       width: fit-content;
@@ -619,7 +735,7 @@ h4 {
   justify-content: flex-start;
   align-items: center;
   height: 15%;
-  background-color: $couleurPrimaire;
+  background-color: $couleur1;
 
   //   @media screen and (min-width: 320px) {
   //     height: 10%;
@@ -627,7 +743,7 @@ h4 {
 
   .container-contact {
     @include defaultFlexContainer;
-    color: white;
+    color: $couleurwhite;
     max-width: 1120px;
 
     margin: auto;
@@ -642,7 +758,7 @@ h4 {
       align-items: center;
       justify-content: center;
 
-      background-color: $couleurnoire;
+      background-color: $couleurblack;
       border-radius: 12px;
       height: fit-content;
       padding: 2rem;
@@ -659,7 +775,7 @@ h4 {
           text-align: center;
           font-size: 1.5rem;
           font-weight: 700;
-          color: white;
+          color: $couleurwhite;
           width: 100%;
         }
       }
@@ -683,10 +799,10 @@ h4 {
         .button {
           appearance: none;
           background-color: transparent;
-          border: 1px solid white;
+          border: 1px solid $couleurwhite;
           border-radius: 36px;
           box-sizing: border-box;
-          color: white;
+          color: $couleurwhite;
           cursor: pointer;
           display: inline-block;
           font-size: 1.2rem;
@@ -710,8 +826,8 @@ h4 {
             pointer-events: none;
           }
           &:hover {
-            color: $couleurPrimaire;
-            background-color: white;
+            color: $couleur1;
+            background-color: $couleurwhite;
             box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
             transform: translateY(-2px);
           }
@@ -729,7 +845,7 @@ h4 {
 /* ---------- Section Footer ---------- */
 
 .section-footer {
-  background-color: $couleurPrimaire;
+  background-color: $couleur1;
   flex-direction: column;
 
   justify-content: flex-start;
@@ -743,20 +859,20 @@ h4 {
     height: 100%;
 
     .slogan-footer {
-      color: white;
+      color: $couleurwhite;
       // font-size: 1.3rem;
       font-weight: 200;
       text-align: center;
-      padding: 2%;
+      padding-top: 1rem;
 
       h3 {
         font-weight: 200;
-        font-size: clamp(1.3rem, 1.1rem + 1vw, 2rem);      }
-      
+        font-size: clamp(1.3rem, 1.1rem + 1vw, 2rem);
+      }
     }
 
     .links {
-      color: $couleurnoire;
+      color: $couleurblack;
       width: 100%;
       display: flex;
       flex-direction: row;
@@ -766,15 +882,13 @@ h4 {
 
       a {
         text-decoration: none;
-        color: white;
+        color: $couleurwhite;
         width: 5%;
         min-width: 3rem;
-        max-width: 5rem;
+        max-width: 3rem;
 
         img {
           width: 100%;
-          min-width: 3rem;
-          max-width: 5rem;
         }
       }
     }
