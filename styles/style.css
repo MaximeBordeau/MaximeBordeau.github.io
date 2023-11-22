@@ -243,23 +243,6 @@ h4 {
     box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.01);
   }
 }
-.section-accueil .custom-shape-divider-bottom-1700648719 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-.section-accueil .custom-shape-divider-bottom-1700648719 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 29px;
-}
-.section-accueil .custom-shape-divider-bottom-1700648719 .shape-fill {
-  fill: #ffffff;
-}
 
 /* ---------- Section Compétences ---------- */
 .section-competences {
