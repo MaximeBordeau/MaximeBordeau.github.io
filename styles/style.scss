@@ -474,7 +474,7 @@ h4 {
       position: relative;
       display: block;
       width: calc(100% + 1.3px);
-      height: 110px;
+      height: 90px;
 
       .shape-fill {
         fill: $couleurgrey;
@@ -558,6 +558,7 @@ h4 {
      
 
       .cont-text{
+        color: $couleurblack;
 
         text-align: center;
 

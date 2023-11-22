@@ -1,0 +1,77 @@
+
+
+@font-face {
+    font-family: 'Aligarh';
+    src: url('fonts/Aligarh/');
+    src: local('fonts/Aligarh/Aligarh Bold'), local('Aligarh-Bold'),
+        url('fonts/Aligarh/?#iefix') format('embedded-opentype'),
+        url('fonts/Aligarh/Aligarh-Bold.woff2') format('woff2'),
+        url('fonts/Aligarh/Aligarh-Bold.woff') format('woff'),
+        url('fonts/Aligarh/Aligarh-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aligarh Semi';
+    src: url('fonts/Aligarh/Aligarh-SemiBold.eot');
+    src: local('fonts/Aligarh/Aligarh Semi Bold'), local('Aligarh-SemiBold'),
+        url('fonts/Aligarh/Aligarh-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Aligarh/Aligarh-SemiBold.woff2') format('woff2'),
+        url('fonts/Aligarh/Aligarh-SemiBold.woff') format('woff'),
+        url('fonts/Aligarh/Aligarh-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Aligarh';
+    src: url('fonts/Aligarh/Aligarh-Medium.eot');
+    src: local('fonts/Aligarh/Aligarh Medium'), local('Aligarh-Medium'),
+        url('fonts/Aligarh/Aligarh-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Aligarh/Aligarh-Medium.woff2') format('woff2'),
+        url('fonts/Aligarh/Aligarh-Medium.woff') format('woff'),
+        url('fonts/Aligarh/Aligarh-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aligarh';
+    src: url('fonts/Aligarh/Aligarh-Light.eot');
+    src: local('fonts/Aligarh/Aligarh Light'), local('Aligarh-Light'),
+        url('fonts/Aligarh/Aligarh-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Aligarh/Aligarh-Light.woff2') format('woff2'),
+        url('fonts/Aligarh/Aligarh-Light.woff') format('woff'),
+        url('fonts/Aligarh/Aligarh-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aligarh';
+    src: url('fonts/Aligarh/Aligarh-Regular.eot');
+    src: local('fonts/Aligarh/Aligarh'), local('Aligarh-Regular'),
+        url('fonts/Aligarh/Aligarh-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Aligarh/Aligarh-Regular.woff2') format('woff2'),
+        url('fonts/Aligarh/Aligarh-Regular.woff') format('woff'),
+        url('fonts/Aligarh/Aligarh-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Aligarh';
+    src: url('fonts/Aligarh/Aligarh-Thin.eot');
+    src: local('fonts/Aligarh/Aligarh Thin'), local('Aligarh-Thin'),
+        url('fonts/Aligarh/Aligarh-Thin.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Aligarh/Aligarh-Thin.woff2') format('woff2'),
+        url('fonts/Aligarh/Aligarh-Thin.woff') format('woff'),
+        url('fonts/Aligarh/Aligarh-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+

@@ -49,16 +49,16 @@ typewriter
 .typeString('Développeur Web Junior')
 .pauseFor(1000)
 .deleteChars(10)
-.typeString ('<span class="span-txt-animation"> HTML</span>')
+.typeString ('<span class="span-txt-animation"><strong> HTML</strong> / <strong>CSS</strong> / <strong>SCSS</strong></span>')
 .pauseFor(1000)
-.deleteChars(4)
-.typeString ('<span class="span-txt-animation"> CSS</span>')
+.deleteChars(17)
+.typeString ('<span class="span-txt-animation"> <strong>JavaScript</strong> / <strong>React</strong></span>')
+.pauseFor(1000)
+.deleteChars(18)
+.typeString ('<span class="span-txt-animation"><strong> PHP</strong></span>')
 .pauseFor(1000)
 .deleteChars(3)
-.typeString ('<span class="span-txt-animation"> JavaScript</span>')
-.pauseFor(1000)
-.deleteChars(10)
-.typeString('<strong> passioné</strong>')
+.typeString('<strong> passionné</strong>')
 .typeString(' !')
 .start()
 
@@ -104,7 +104,7 @@ const scene1 = new ScrollMagic.Scene({
 
 // Anim portfolio
 
-const portfolioContainer = document.querySelector('.portfolio')
+const portfolioContainer = document.querySelector('.container-portfolio')
 const titrePortfolio = document.querySelector('.titre-port')
 const itemPortfolio = document.querySelectorAll('.vague1')
 
