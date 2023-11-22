@@ -265,6 +265,7 @@ h4 {
 .section-competences {
   align-items: center;
   height: fit-content;
+  position: relative;
 }
 .section-competences .titre-competences {
   width: 100%;
@@ -329,6 +330,23 @@ h4 {
   margin-left: 0.2rem;
   padding: 0.5rem;
 }
+.section-competences .custom-shape-divider-bottom-1700653292 {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  position: absolute;
+}
+.section-competences .custom-shape-divider-bottom-1700653292 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 110px;
+}
+.section-competences .custom-shape-divider-bottom-1700653292 svg .shape-fill {
+  fill: #F1F5FB;
+}
 
 /* ---------- Section Portfolio ---------- */
 .section-portfolio {
@@ -337,24 +355,6 @@ h4 {
   align-items: center;
   background-color: #F1F5FB;
   position: relative;
-}
-.section-portfolio .custom-shape-divider-top-1700650492 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-.section-portfolio .custom-shape-divider-top-1700650492 svg {
-  position: relative;
-  display: block;
-  width: calc(127% + 1.3px);
-  height: 64px;
-}
-.section-portfolio .custom-shape-divider-top-1700650492 svg .shape-fill {
-  fill: #ffffff;
 }
 .section-portfolio .titre-port {
   padding: 3rem;
@@ -440,6 +440,7 @@ h4 {
 .section-portfolio .container-portfolio .item .btn-projets:active {
   opacity: 0.5;
 }
+
 /* ---------- Section À propos ---------- */
 .section-apropos {
   flex-direction: column;
@@ -448,7 +449,7 @@ h4 {
   padding-bottom: 12rem;
   color: #1A1D22;
   width: 100%;
-  background-color: #ffffff;
+  background-color: #F1F5FB;
 }
 .section-apropos .container-apropos {
   width: 100%;
@@ -469,6 +470,7 @@ h4 {
   -webkit-backdrop-filter: blur(8.5px);
   border-radius: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  background-color: #ffffff;
   max-width: 1120px;
 }
 @media screen and (max-width: 500px) {
@@ -514,6 +516,10 @@ h4 {
   color: #ffffff;
   max-width: 1120px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .section-contact .container-contact .panel-contact {
   display: flex;
@@ -526,6 +532,7 @@ h4 {
   padding: 2rem;
   margin-top: -10rem;
   z-index: 2;
+  width: 70%;
 }
 @media screen and (max-width: 20) {
   .section-contact .container-contact .panel-contact {
@@ -594,7 +601,7 @@ h4 {
   pointer-events: none;
 }
 .section-contact .container-contact .panel-contact .button-contact .button:hover {
-  color: #001F9A;
+  color: #9f89f5;
   background-color: #ffffff;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
