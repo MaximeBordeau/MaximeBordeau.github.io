@@ -1,0 +1,15 @@
+@mixin query($screen) {
+  @each $key, $value in $bp {
+    @if ($screen == $key) {
+      @media (min-width: $value) {
+        @content;
+      }
+    }
+  }
+}
+
+$bp: (
+    mobile: 480px,
+    tablet: 540px,
+    desktop: 1440px,
+  );

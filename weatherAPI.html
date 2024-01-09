@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style_weatherAPI.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500;600;700;800;900;1000&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/93a0fb2cd5.js" crossorigin="anonymous"></script>
+
+
+
+    <title>WeatherAPI</title>
+</head>
+
+<body>
+    <nav>
+        <div class="brand">
+            <div class="logo">
+                <i class="fa-solid fa-cloud-sun fa-2xl"></i>
+                <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                    y="0px" viewBox="0 0 256 256" enable-background="new 0 0 256 256" xml:space="preserve">
+                    <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+                    <g>
+                        <g>
+                            <g>
+                                <path
+                                    d="M176,8c-1,1.5-3.2,5.1-4.8,7.9l-3.1,5.1l-4.1-3c-2.2-1.6-5.6-4.1-7.4-5.6c-1.9-1.4-3.7-2.5-4-2.4c-0.6,0.2-1.4,3.5-2.7,12.6l-0.9,6.1l-8-2c-8.4-2.1-10.2-2.4-10.7-1.6c-0.2,0.3,0.7,4.4,1.9,9.1c1.2,4.7,2,8.7,1.9,8.9c-0.2,0.2-4.3,0.9-9.2,1.6c-6.9,1-8.8,1.5-9,2.2c-0.1,0.4,2.3,4.1,5.2,8.1c3,4,5.3,7.3,5.2,7.4c-0.1,0.1-0.8,0.5-1.5,1c-1.3,0.8-1.1,0.9,4.6,0.9c3.2,0,6.2,0.1,6.6,0.3c0.6,0.2,1-0.5,1.4-2.7c0.4-1.6,1.9-5.2,3.3-8c4.3-8.5,10.5-14.8,18.7-18.9c7.2-3.5,10.3-4.2,19.3-4.2c7.3,0.1,7.9,0.2,12.7,1.7c2.8,1,6.7,2.8,8.7,3.9c4.8,2.8,11.6,9.7,14.4,14.4c7.1,12,7.9,27.3,2,39.6c-1,2.1-2.3,4.4-2.8,5.2l-1,1.4l5.3,5.5c2.9,3,5.3,5.5,5.4,5.3c0.1-0.1-0.2-1.4-0.6-3.1c-0.5-1.6-0.6-3-0.5-3c1.9,0,17.8-2.7,18.3-3.1c0.6-0.6,0.6-0.6-5.5-8.8c-2.8-3.7-5-6.9-4.9-7c0.1-0.2,3.5-2.3,7.7-4.9c4.1-2.5,7.6-4.9,7.7-5.4c0.1-0.6-2.2-2.2-7.6-5.5c-4.2-2.5-7.7-4.8-7.7-5.1c0-0.3,2.4-3.8,5.3-7.7c4.5-6,5.2-7.3,4.7-7.9c-0.4-0.4-4.4-1.2-8.9-1.9c-4.5-0.6-8.5-1.2-8.8-1.3c-0.4-0.2,0.1-2.7,1.5-8.3c2.4-9.6,2.5-10.5,0.9-10.5c-0.7,0-4.9,1-9.3,2.1c-5.6,1.4-8.2,1.9-8.3,1.5c-0.1-0.4-0.7-4.3-1.3-8.8c-0.6-4.5-1.5-8.5-1.9-8.9c-0.5-0.6-1.9,0.2-7.9,4.6c-4,3-7.4,5.3-7.7,5.3c-0.3,0-2.5-3.4-5.1-7.7c-2.5-4.2-4.9-7.7-5.3-7.7C178.1,5.3,176.9,6.6,176,8z" />
+                                <path
+                                    d="M113.5,73.8C60,80.6,18.4,121.8,10.8,175.4c-1.2,8.4-1.3,8.2,2.3,5.1c8.7-7.5,19.2-12.3,30.2-13.9c6-0.9,17.1-0.4,22.3,1c8.5,2.2,15.5,5.6,21.6,10.2l2.7,2.1l2.4-1.9c6.1-4.7,13.8-8.3,22.3-10.4c6.7-1.7,20.1-1.7,26.8,0c8.5,2.1,16.1,5.7,22.3,10.4l2.4,1.9l2.7-2.1c7-5.3,16.6-9.4,25.5-11c6.7-1.2,17.9-0.7,24.2,0.8c8.9,2.4,16.9,6.5,23.7,12.1c4.4,3.8,4.3,4,3-5.2c-5-34.5-24.3-64.2-54-83.5c-5.8-3.8-17.9-9.6-24.3-11.8c-6-2-13.9-4-20.4-5.1C139.6,73.1,121.1,72.9,113.5,73.8z" />
+                                <path
+                                    d="M121,175l-1.5,0.2v25.9c0,24.7-0.1,26-1.1,27.9c-2.6,5.1-9.4,6.1-13.5,2c-1.8-1.8-2-2.4-2.6-6.9c-0.6-4.7-5.9-8.4-10.3-7.1c-4.5,1.3-6.4,4-6.4,9.1c0,6.6,2.8,12.7,8.2,17.8c13.9,13.2,37,6.4,41.9-12.4c0.6-2.5,0.8-7.7,0.8-29.6v-26.5l-2-0.4C132.3,174.6,123.4,174.6,121,175z" />
+                            </g>
+                        </g>
+                    </g>
+                </svg> -->
+            </div>
+            <h1>weatherAPI</h1>
+        </div>
+        <div class="navbar-btn">
+            <div class="search-btn"></div>
+            <!-- <div class="icon-btn fill">
+                <i class="fa-solid fa-icons fa-xl iconFA"></i>
+            </div> -->
+        </div>
+    </nav>
+
+    <div class="wrapper">
+
+        <div class="container today grid01">
+            <div class="container-top">
+                <div class="temperature">
+                    <h2>Aujourd'hui</h2>
+
+                    <div class="temperature-value">
+                        <span>-</span>
+                    </div>
+                    <div class="temperature-description">
+                        <p>-</p>
+                    </div>
+                </div>
+                <div class="weather-icon">
+                    <img src="icons/loader.svg" alt="loader" id="loader">
+                </div>
+            </div>
+
+            <div class="horizontal-line">
+            </div>
+            <div class="container-bottom">
+                <div class="date-today">
+                    <i class="fa-regular fa-calendar fa-xl iconFA"></i>
+                    <p class="label">Vendredi 5 janvier 2024</p>
+                </div>
+                <div class="location">
+                    <i class="fa-solid fa-location-dot fa-xl iconFA"></i>
+                    <p class="label">-</p>
+                </div>
+
+
+            </div>
+
+
+
+
+        </div>
+
+        <!-- <div class="container prévisions grid02">
+    </div> -->
+
+        <div class="container informations grid03">
+            <h2 class="title">Informations Supplémentaires</h2>
+
+            <div class="errorMsg"></div>
+
+            <div class="temperature-infos group">
+                <h3 class="group-label">Températures</h3>
+
+                <div class="sub-group">
+                    <div class="temperature-ressentie card ">
+                        <i class="fa-solid fa-temperature-half fa-xl iconFA"></i>
+                        <div class="data">
+                            <h3 class="label">Ressenti</h3>
+                            <p>-</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="horizontal-line">
+                </div>
+
+                <div class="sub-group">
+                    <div class="temperature-min card">
+                        <i class="fa-solid fa-temperature-arrow-down fa-xl iconFA"></i>
+                        <div class="data">
+                            <h3 class="label">Min.</h3>
+
+                            <p>-</p>
+                        </div>
+
+                    </div>
+                    <div class="temperature-max card">
+                        <i class="fa-solid fa-temperature-arrow-up fa-xl iconFA"></i>
+                        <div class="data">
+                            <h3 class="label">Max.</h3>
+                            <p>-</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="vent group">
+                <h3 class="label">Vitesse du vent</h3>
+
+                <div class="vent card">
+                    <div class="sub-group">
+
+                        <div class="data">
+
+                            <i class="fa-solid fa-wind iconFA"></i>
+                            <p>-</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="humidité group">
+                <div class="humidité card">
+                    <h3 class="label">Humidité</h3>
+
+                    <div class="sub-group">
+                        <div class="data">
+                            <i class="fa-solid fa-droplet fa-xl iconFA"></i>
+                            <p>-</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pression group">
+                <div class="pression card">
+                    <h3 class="label">Pression</h3>
+
+
+                    <div class="sub-group">
+
+                        <div class="data">
+                            <i class="fa-solid fa-arrows-down-to-line fa-xl iconFA"></i>
+                            <p>-</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sunrise-sunset group">
+                <h3 class="label">Lever & Coucher du soleil</h3>
+                <div class="sub-group">
+                    <div class="sunrise card">
+                        <div class="data">
+                            <!-- <h3 class="label">Levé du soleil</h3> -->
+                            <i class="fa-regular fa-sun fa-xl iconFA"></i>
+                            <p>-</p>
+                        </div>
+                    </div>
+
+                    <div class="sunset card">
+                        <!-- <h3 class="label">Couché du soleil</h3> -->
+                        <div class="data">
+                            <i class="fa-regular fa-moon fa-xl iconFA"></i>
+                            <p>-</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container airpollution grid04">
+            <h2 class="title">Qualité de l'air</h2>
+
+            <div class="container-data">
+                <div class="indice-ATMO group">
+                    <div class="indice-ATMO card">
+                        <h3 class="label">Indice ATMO</h3>
+
+
+                        <div class="sub-group">
+                            <div class="data">
+                                <i class="fa-solid fa-circle-exclamation fa-xl iconFA"></i>
+                                <p>-</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="polluants group">
+                    <h3 class="group-label">Concentration par polluants</h3>
+
+                    <div class="sub-group">
+                        <div class="o3 card">
+                            <div class="data">
+                                <h3 class="label">Ozone (o3)</h3>
+                                <p>-</p>
+                            </div>
+                        </div>
+                        <div class="no2 card">
+                            <div class="data">
+                                <h3 class="label">Dioxyde d'azote (NO2)</h3>
+                                <p>-</p>
+                            </div>
+                        </div>
+                        <div class="so2 card">
+                            <div class="data">
+                                <h3 class="label">Dioxyde de soufre (SO2)</h3>
+                                <p>-</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="horizontal-line">
+                    </div>
+
+                    <div class="sub-group">
+                        <div class="pm10 card">
+                            <div class="data">
+                                <h3 class="label">Particules fines (PM10)</h3>
+                                <p>-</p>
+                            </div>
+                        </div>
+                        <div class="pm2_5 card">
+                            <div class="data">
+                                <h3 class="label">Particules fines (PM2,5)</h3>
+                                <p>-</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div>Concentration moyenne 30 jours</div>
+        Indice Moyen 30 jours
+        <div>Graph avec chartingJS</div>
+        <div>Calendrier avec la couleur pour le jour</div> -->
+
+        </div>
+
+        <!-- <div class="container map">
+        Map température
+        boutons pour changer de map ?
+    </div> -->
+
+
+    </div>
+
+    <footer>
+        <div class="footer-top">
+            <p>© 2023 - Maxime Bordeau - Tous droits réservés.</p>
+        </div>
+        <div class="footer-bottom">
+            <p class="powered-by">Powered by</p>
+            <div class="svg">
+                <img src="ressources/openweather_logo.svg" alt="openweatherlogo" id="openweather">
+            </div>
+
+
+        </div>
+
+
+    </footer>
+    <script src="script-weatherAPI.js"></script>
+</body>
+
+</html>
