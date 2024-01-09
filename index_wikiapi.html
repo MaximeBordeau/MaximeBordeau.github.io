@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style_wikiapi.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <title>WikiAPI</title>
+</head>
+
+<body>
+    <div class="header">
+        <img src="ressources/logo-w.svg" alt="logo" id="logo">
+        <!-- <h1>WikiSearch</h1> -->
+    </div>
+
+    <div class="app">
+        <form action="" id="form">
+            <input id="input" type="text" placeholder="Recherchez sur Wikipedia">
+
+        </form>
+
+        <p class="error-msg"></p>
+        <div class="search-result"></div>
+        <div class="loader-animation"></div>
+
+
+    </div>
+
+    <footer id='footer'>
+        <a href="#logo" class="button"></a>
+
+    </footer>
+
+    <script src="script_wikiapi.js"></script>
+</body>
+
+</html>
