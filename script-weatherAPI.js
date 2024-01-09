@@ -102,7 +102,7 @@ function showError(error) {
 }
 
 function getAirPollution(latitude, longitude) {
-  let apiAirPollution = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${latitude}&lon=${longitude}&appid=${key}`;
+  let apiAirPollution = `https://api.openweathermap.org/data/2.5/air_pollution?lat=${latitude}&lon=${longitude}&appid=${key}`;
 
   console.log(apiAirPollution);
 
